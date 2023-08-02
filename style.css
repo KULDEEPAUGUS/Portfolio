@@ -1,0 +1,380 @@
+* {
+    scroll-behavior: smooth;
+    transition-property: scroll-behavior;
+    scrollbar-color: crimson black;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    color: white;
+    text-decoration: none;
+    overflow-x: hidden;
+}
+
+header {
+    scrollbar-color: crimson black;
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    overflow-y: hidden;
+
+}
+
+header nav {
+    align-items: center;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(34, 32, 32);
+    width: 100%;
+    padding-top: 2vh;
+    padding-bottom: 1vh;
+    border: none;
+}
+
+nav div ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5vw;
+    font-size: 1.05vw;
+}
+
+header nav div ul li a {
+    color: white;
+    transition-duration: 0.5s;
+    transition-property: border-bottom, color;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+header nav div ul li a:hover {
+    color: crimson;
+    border-bottom: 1px solid white;
+}
+
+header nav div ul .github:hover {
+    fill: crimson;
+    background-color: white;
+    border-radius: 50%;
+}
+
+header nav div ul .linkledin:hover {
+    fill: crimson;
+    background-color: white;
+    border-radius: 0.1vw;
+}
+
+header section {
+    display: flex;
+    justify-content: space-around;
+    scrollbar-color: white;
+    margin-top: 15vh;
+    overflow-y: hidden;
+}
+
+header section img {
+    margin-top: -8vh;
+    margin-left: -19vw;
+    width: 70vw;
+    height: auto;
+
+}
+
+header section div h1 .name {
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+
+@keyframes example {
+    0% {
+        color: crimson;
+    }
+
+    25% {
+        color: rgb(246, 57, 94);
+    }
+
+    50% {
+        color: rgb(236, 63, 97);
+    }
+
+    100% {
+        color: rgb(247, 166, 166);
+    }
+
+}
+
+header section .hello {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    margin-right: 20vh;
+}
+
+header section h1 {
+    margin-right: 2vw;
+    margin-top: 5vh;
+    color: white;
+    font-size: 4rem;
+}
+
+header section div {
+    margin-top: 5vh;
+    display: flex;
+}
+
+header section .hello div {
+    gap: 2vw;
+}
+
+header section .hello div .aboutme {
+    border-radius: 0.25vw;
+    border: 0.15vw solid crimson;
+    padding: 1vw;
+    font-size: 1.5vw;
+    background-color: crimson;
+    transition-duration: 0.6s;
+    transition-property: background-color, border-color;
+}
+
+header section .hello div .aboutme:hover {
+    background-color: rgba(0, 0, 0, 0.474);
+    border-color: white;
+}
+
+header section .hello div .Contact {
+    background-color: rgba(0, 0, 0, 0.474);
+    border: none;
+    font-size: 1.5vw;
+    padding: 1vw;
+    transition-duration: 0.5s;
+    transition-property: color, fill;
+    border: 0.15vw solid white;
+    border-radius: 0.25vw;
+}
+
+header section .hello div .Contact a svg:hover,
+header section .hello div .Contact a:hover {
+    fill: rgba(255, 255, 255, 0.436);
+    color: rgba(255, 255, 255, 0.436);
+}
+
+main {
+    scrollbar-color: yellow black;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding-top: 15vh;
+}
+
+main .myself {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 10vh;
+}
+
+main .myself .gola {
+    background: linear-gradient(rgb(223, 150, 5), rgb(224, 108, 13), rgb(214, 14, 47), purple, blue, rgb(244, 5, 244));
+    border-radius: 50%;
+    align-items: center;
+    margin-left: 2vw;
+}
+
+main .myself .gola img {
+    width: 15vw;
+    border-radius: 50%;
+    align-items: center;
+    padding: .5vw;
+    padding-bottom: .1vw;
+}
+
+main .myself div {
+    margin-left: -10vw;
+}
+
+main div .kam {
+    width: 34vw;
+    margin-left: 0px;
+}
+
+main .projects {
+    background-color: black;
+    padding-top: 10vh;
+    padding-bottom: 20vh;
+}
+
+main .projects .name {
+    text-align: center;
+    font-size: 3vw;
+    font-weight: 600;
+}
+
+main .projects .all {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.all a {
+    margin-top: 10vh;
+    width: 20vw;
+    padding-top: 5%;
+    height: 20vw;
+    background-color: rgb(2, 82, 82);
+    border: 0.15vw solid white;
+    transition-duration: 0.5s;
+    transition-property: border-radius, transform;
+    transition-duration: 1s;
+    transition-property: background-image;
+}
+
+.all a:hover {
+    border-radius: 0.25vw;
+}
+
+a:visited h1 {
+    visibility: hidden;
+}
+
+.all .Auguskart:hover {
+    background-image: url('/auguskart.png');
+    background-size: cover;
+}
+
+.all .qrcode:hover {
+    background-image: url('/qrcode.png');
+    background-size: cover;
+}
+
+.all .ayodhya:hover {
+    background-image: url('/ayodhya.png');
+    background-size: cover;
+}
+
+.all a div h3 {
+    font-size: 1vw;
+    text-align: center;
+    padding-top: 3vh;
+}
+
+.all a div p {
+    text-align: center;
+    padding-top: 2vh;
+}
+
+.contactme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contactme h1 {
+    font-size: 3vw;
+    padding-top: 5vh;
+}
+
+.contactme form {
+    padding-top: 3vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    padding-bottom: 3vh;
+}
+
+.contactme form input {
+    border-radius: 1vw;
+    width: 40vw;
+    border: 0.1vw solid white;
+    background-color: black;
+    outline: none;
+    padding: 0.5vh;
+    font-size: 0.8vw;
+    padding-left: 1vw;
+}
+
+.contactme form textarea {
+    background-color: black;
+    color: white;
+    padding: 1vh;
+    outline: none;
+}
+
+.contactme form button {
+    background-color: crimson;
+    border: 0.1vw solid crimson;
+    padding: 1vh;
+    border-radius: 0.25vw;
+    transition-duration: 0.5s;
+    transition-property: border, color, background-color;
+}
+
+.contactme form button:hover {
+    background-color: black;
+    border: 0.1vw solid white;
+}
+
+footer {
+    padding: 4vh;
+    background: linear-gradient(to right, rgb(234, 2, 242), rgb(246, 134, 5));
+    background-position: cover;
+    background-clip: padding-box;
+}
+
+footer div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+footer div a svg:hover {
+    fill: rgb(2, 88, 88);
+}
+
+footer p a {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3vh;
+    font-size: 1vw;
+    font-weight: 600;
+    color: black;
+}
+
+footer p a:hover {
+    color: rgb(7, 7, 82);
+}
+
+@media only screen and (max-width: 633px) {
+    header section h1 {
+        font-size: 1.5rem;
+    }
+
+    header nav {
+        font-size: small;
+    }
+
+    header {
+        height: 80vh;
+    }
+
+    main {
+        margin-top: -50px;
+    }
+
+    main.myself.gola img {
+        width: 30px;
+    }
+
+    main .myself div {
+        font-size: 10px;
+    }
+
+    footer img {
+        width: 40px;
+    }
+
+    footer p a {
+        font-size: 10px;
+    }
+}
