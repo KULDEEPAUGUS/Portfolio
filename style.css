@@ -13,16 +13,15 @@
 }
 
 header {
-    scrollbar-color: crimson black;
     background-color: black;
-    height: 100vh;
+    height: 100vmin;
     width: 100%;
     background-size: cover;
     overflow-y: hidden;
-
 }
 
 header nav {
+    z-index: 1;
     align-items: center;
     position: fixed;
     display: flex;
@@ -32,6 +31,10 @@ header nav {
     padding-top: 2vh;
     padding-bottom: 1vh;
     border: none;
+}
+
+header nav div a {
+    align-items: center;
 }
 
 nav div ul {
@@ -67,18 +70,17 @@ header nav div ul .linkledin:hover {
 
 header section {
     display: flex;
-    justify-content: space-around;
+    margin-left: -10vw;
     scrollbar-color: white;
-    margin-top: 15vh;
     overflow-y: hidden;
+    padding-top: 15vh;
+    gap: 10vw;
 }
 
 header section img {
-    margin-top: -8vh;
-    margin-left: -19vw;
+    margin-left: -10vw;
     width: 70vw;
-    height: auto;
-
+    scale: 1.25;
 }
 
 header section div h1 .name {
@@ -111,7 +113,6 @@ header section .hello {
     display: flex;
     flex-direction: column;
     float: right;
-    margin-right: 20vh;
 }
 
 header section h1 {
@@ -169,9 +170,12 @@ main {
 }
 
 main .myself {
+    margin-left: -5vw;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 10vmin;
+    justify-content: center;
     padding-bottom: 10vh;
 }
 
@@ -179,7 +183,6 @@ main .myself .gola {
     background: linear-gradient(rgb(223, 150, 5), rgb(224, 108, 13), rgb(214, 14, 47), purple, blue, rgb(244, 5, 244));
     border-radius: 50%;
     align-items: center;
-    margin-left: 2vw;
 }
 
 main .myself .gola img {
@@ -190,13 +193,8 @@ main .myself .gola img {
     padding-bottom: .1vw;
 }
 
-main .myself div {
-    margin-left: -10vw;
-}
-
 main div .kam {
-    width: 34vw;
-    margin-left: 0px;
+    width: 40vw;
 }
 
 main .projects {
@@ -218,9 +216,8 @@ main .projects .all {
 }
 
 .all a {
-    margin-top: 10vh;
+    margin-top: 10vmin;
     width: 20vw;
-    padding-top: 5%;
     height: 20vw;
     background-color: rgb(2, 82, 82);
     border: 0.15vw solid white;
@@ -232,10 +229,6 @@ main .projects .all {
 
 .all a:hover {
     border-radius: 0.25vw;
-}
-
-a:visited h1 {
-    visibility: hidden;
 }
 
 .all .Auguskart:hover {
@@ -272,7 +265,11 @@ a:visited h1 {
 
 .contactme h1 {
     font-size: 3vw;
-    padding-top: 5vh;
+    padding-top: 6vh;
+}
+
+.contactme p {
+    font-size: 1.5vw;
 }
 
 .contactme form {
@@ -295,6 +292,9 @@ a:visited h1 {
 }
 
 .contactme form textarea {
+    width: 40vw;
+    height: 10vh;
+    font-size: 1vw;
     background-color: black;
     color: white;
     padding: 1vh;
@@ -304,7 +304,10 @@ a:visited h1 {
 .contactme form button {
     background-color: crimson;
     border: 0.1vw solid crimson;
-    padding: 1vh;
+    width: 40vw;
+    height: 3vw;
+    font-size: 1vw;
+    padding: 0.25vh;
     border-radius: 0.25vw;
     transition-duration: 0.5s;
     transition-property: border, color, background-color;
@@ -316,10 +319,9 @@ a:visited h1 {
 }
 
 footer {
-    padding: 4vh;
+    padding: 2vmin;
     background: linear-gradient(to right, rgb(234, 2, 242), rgb(246, 134, 5));
     background-position: cover;
-    background-clip: padding-box;
 }
 
 footer div {
@@ -335,7 +337,7 @@ footer div a svg:hover {
 footer p a {
     display: flex;
     justify-content: space-around;
-    margin-top: 3vh;
+    margin-top: 1vmin;
     font-size: 1vw;
     font-weight: 600;
     color: black;
@@ -343,38 +345,44 @@ footer p a {
 
 footer p a:hover {
     color: rgb(7, 7, 82);
+    font-weight: 400;
 }
 
 @media only screen and (max-width: 633px) {
     header section h1 {
         font-size: 1.5rem;
     }
-
-    header nav {
-        font-size: small;
+    header nav .next ul {
+        align-items: center;
+    }
+    header nav .next ul li a{
+        font-size: 2vw;
+    }
+    header nav .next ul li {
+        padding-bottom: 0.1vh;
+    }
+    main .projects{
+        padding-top: 5vh;
+        height: 30vh;
+    }
+    header section img {
+        scale: 1.25;
+        z-index: 0;
+    }
+    header section .hello {
+        margin-top: -5vh;
+        padding-bottom: 10vh;
     }
 
     header {
-        height: 80vh;
+        height: 40vh;
     }
-
     main {
-        margin-top: -50px;
+        margin-top: -10vh;
     }
 
-    main.myself.gola img {
-        width: 30px;
-    }
-
-    main .myself div {
-        font-size: 10px;
-    }
-
-    footer img {
-        width: 40px;
-    }
-
-    footer p a {
-        font-size: 10px;
+    .contactme form button:hover {
+        background-color: black;
+        border: 0.1vw solid white;
     }
 }
